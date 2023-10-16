@@ -11,4 +11,10 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Semicrol.DddTemplate.Application\Semicrol.DddTemplate.Application.csproj" />
+      <ProjectReference Include="..\Semicrol.DddTemplate.Core\Semicrol.DddTemplate.Core.csproj" />
+      <ProjectReference Include="..\Semicrol.DddTemplate.Infrastructure\Semicrol.DddTemplate.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>

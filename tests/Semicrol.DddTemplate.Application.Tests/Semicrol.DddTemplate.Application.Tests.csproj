@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Semicrol.DddTemplate.Application\Semicrol.DddTemplate.Application.csproj" />
+    </ItemGroup>
+
 </Project>

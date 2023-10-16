@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Semicrol.DddTemplate.Application\Semicrol.DddTemplate.Application.csproj" />
+      <ProjectReference Include="..\Semicrol.DddTemplate.Core\Semicrol.DddTemplate.Core.csproj" />
+    </ItemGroup>
+
 </Project>
