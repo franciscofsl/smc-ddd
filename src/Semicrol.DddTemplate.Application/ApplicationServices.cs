@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Semicrol.DddTemplate.Application.Cqrs.Commands;
-using Semicrol.DddTemplate.Application.Cqrs.Queries;
+using Semicrol.DddTemplate.Application.Shared.Cqrs.Commands;
+using Semicrol.DddTemplate.Application.Shared.Cqrs.Queries;
 
 namespace Semicrol.DddTemplate.Application;
 

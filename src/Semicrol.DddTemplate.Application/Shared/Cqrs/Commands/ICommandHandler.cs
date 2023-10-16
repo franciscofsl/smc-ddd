@@ -1,4 +1,4 @@
-﻿namespace Semicrol.DddTemplate.Application.Cqrs.Commands;
+﻿namespace Semicrol.DddTemplate.Application.Shared.Cqrs.Commands;
 
 public interface ICommandHandler<in TRequest, TResult>
     where TRequest : ICommandRequest<TResult>

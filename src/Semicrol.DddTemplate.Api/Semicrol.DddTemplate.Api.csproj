@@ -17,4 +17,8 @@
       <ProjectReference Include="..\Semicrol.DddTemplate.Infrastructure\Semicrol.DddTemplate.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Contracts\" />
+    </ItemGroup>
+
 </Project>

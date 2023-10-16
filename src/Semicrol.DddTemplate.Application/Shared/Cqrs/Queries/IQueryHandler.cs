@@ -1,4 +1,4 @@
-namespace Semicrol.DddTemplate.Application.Cqrs.Queries;
+namespace Semicrol.DddTemplate.Application.Shared.Cqrs.Queries;
 
 public interface IQueryHandler<in TQuery, TResult>
     where TQuery : IQueryRequest<TResult>
