@@ -9,7 +9,7 @@ public static class BaseAsyncEndpoint
         public abstract class WithResponse<TResponse> : EndpointBase
         {
             public abstract Task<ActionResult<TResponse>> HandleAsync(
-                TRequest recipeId,
+                TRequest request,
                 CancellationToken cancellationToken = default);
         }
 

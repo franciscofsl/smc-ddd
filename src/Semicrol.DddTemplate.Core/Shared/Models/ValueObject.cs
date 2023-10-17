@@ -1,4 +1,4 @@
-namespace Semicrol.DddTemplate.Core.Orders;
+namespace Semicrol.DddTemplate.Core.Shared.Models;
 
 public abstract record ValueObject : IEquatable<ValueObject>
 {

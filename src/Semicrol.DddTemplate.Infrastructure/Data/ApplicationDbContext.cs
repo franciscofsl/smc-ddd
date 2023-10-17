@@ -1,5 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.ComponentModel;
+using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 using Semicrol.DddTemplate.Application.Contracts;
+using Semicrol.DddTemplate.Core.Products;
 using Semicrol.DddTemplate.Core.Shared.Models;
 
 namespace Semicrol.DddTemplate.Infrastructure.Data;
@@ -17,6 +20,8 @@ public class ApplicationDbContext : DbContext
         _publisher = publisher;
     }
 
+    public virtual DbSet<Product> Products { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
@@ -26,6 +31,11 @@ public class ApplicationDbContext : DbContext
         }
     }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
+ 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
         var result = await base.SaveChangesAsync(cancellationToken);

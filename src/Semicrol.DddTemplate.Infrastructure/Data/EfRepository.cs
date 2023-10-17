@@ -1,13 +1,12 @@
 ﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Semicrol.DddTemplate.Core.Orders.ValueObjects;
 using Semicrol.DddTemplate.Core.Shared;
 using Semicrol.DddTemplate.Core.Shared.Models;
 
 namespace Semicrol.DddTemplate.Infrastructure.Data;
 
 public class EfRepository<TAggregateRoot, TId> : IRepository<TAggregateRoot, TId>
-    where TAggregateRoot : AgreggateRoot<TId>
+    where TAggregateRoot : AggregateRoot<TId>
     where TId : EntityId
 {
     public EfRepository(ApplicationDbContext context)
@@ -45,6 +44,12 @@ public class EfRepository<TAggregateRoot, TId> : IRepository<TAggregateRoot, TId
         }
 
         return await queryable.ToListAsync();
+    }
+
+    public async Task<TAggregateRoot> GetByIdAsync(TId id)
+    {
+        var queryable = Context.Set<TAggregateRoot>().AsQueryable();
+        return await queryable.FirstOrDefaultAsync(_ => _.Id == id);
     }
 
     public async Task SaveChangesAsync()

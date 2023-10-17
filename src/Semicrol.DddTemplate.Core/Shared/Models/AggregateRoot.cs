@@ -1,11 +1,19 @@
-﻿using Semicrol.DddTemplate.Core.Orders.ValueObjects;
-using Semicrol.DddTemplate.Core.Shared.Events;
+﻿using Semicrol.DddTemplate.Core.Shared.Events;
 
 namespace Semicrol.DddTemplate.Core.Shared.Models;
 
-public class AgreggateRoot<TId> where TId : EntityId
+public class AggregateRoot<TId> where TId : EntityId
 {
     private readonly List<IDomainEvent> _domainEvents = new();
+
+    protected AggregateRoot()
+    {
+    }
+
+    protected AggregateRoot(TId id)
+    {
+        Id = GuardClauses.NotNull(id, nameof(id));
+    }
 
     public TId Id { get; protected init; }
 
