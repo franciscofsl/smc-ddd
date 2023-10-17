@@ -10,33 +10,19 @@ public class Product : AggregateRoot<ProductId>
 {
     private Product()
     {
+        /* For ORM */
     }
 
     public Product(ProductId id, ProductInfo info)
         : base(id)
     {
         Information = GuardClauses.NotNull(info, nameof(info));
-        Price = Price.Empty;
         Ratings = Ratings.Empty;
     }
 
-    public ProductInfo Information { get; private set; }
+    public ProductInfo Information { get; private init; }
 
-    public Price Price { get; private set; }
-
-    public Ratings Ratings { get; private set; }
-
-    public ProductInfo ChangeInfo(string title, string description)
-    {
-        Information = ProductInfo.Create(title, description);
-        return Information;
-    }
-
-    public Price ChangePrice(decimal? value, int vat)
-    {
-        Price = Price.Create(value, vat);
-        return Price;
-    }
+    public Ratings Ratings { get; private init; }
 
     public Rating Rate(string user, int value)
     {

@@ -14,7 +14,6 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .IsRequired();
 
         builder.OwnsOne(_ => _.Information, ownedNavigationBuilder => { ownedNavigationBuilder.ToJson(); });
-        builder.OwnsOne(_ => _.Price, ownedNavigationBuilder => { ownedNavigationBuilder.ToJson(); });
 
         builder.OwnsOne(_ => _.Ratings, ownedNavigationBuilder =>
         {
