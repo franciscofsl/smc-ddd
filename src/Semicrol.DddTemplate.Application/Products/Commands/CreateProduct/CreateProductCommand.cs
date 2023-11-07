@@ -3,7 +3,7 @@ using Semicrol.DddTemplate.Core.Products;
 
 namespace Semicrol.DddTemplate.Application.Products.Commands.CreateProduct;
 
-public class CreateProductCommand : ICommandRequest<Product>
+public class CreateProductCommand : ICommand<Product>
 {
     public string Title { get; set; }
     

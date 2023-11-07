@@ -1,6 +1,5 @@
 ﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Semicrol.DddTemplate.Core.Products;
 using Semicrol.DddTemplate.Core.Shared;
 using Semicrol.DddTemplate.Core.Shared.Models;
 
@@ -35,7 +34,7 @@ public class EfRepository<TAggregateRoot, TId> : IRepository<TAggregateRoot, TId
         return Task.CompletedTask;
     }
 
-    public async Task<List<Product>> GetAsync(Expression<Func<TAggregateRoot, bool>> filter = null)
+    public async Task<List<TAggregateRoot>> GetAsync(Expression<Func<TAggregateRoot, bool>> filter = null)
     {
         var queryable = Context.Set<TAggregateRoot>().AsQueryable();
 

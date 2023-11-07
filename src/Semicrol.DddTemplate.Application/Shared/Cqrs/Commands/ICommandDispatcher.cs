@@ -2,5 +2,5 @@
 
 public interface ICommandDispatcher
 {
-    Task<TCommandResult> Dispatch<TCommandResult>(ICommandRequest<TCommandResult> commandRequest) where TCommandResult : class;
+    Task<TCommandResult> Dispatch<TCommandResult>(ICommand<TCommandResult> command) where TCommandResult : class;
 }

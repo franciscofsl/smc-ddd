@@ -14,7 +14,7 @@ public interface IRepository<TAggregateRoot, TId>
 
     Task DeleteAsync(TAggregateRoot aggregateRoot);
 
-    Task<List<Product>> GetAsync(Expression<Func<TAggregateRoot, bool>> filter = null);
+    Task<List<TAggregateRoot>> GetAsync(Expression<Func<TAggregateRoot, bool>> filter = null);
 
     Task<TAggregateRoot> GetByIdAsync(TId id);
     

@@ -4,7 +4,7 @@ using Semicrol.DddTemplate.Core.Products;
 
 namespace Semicrol.DddTemplate.Application.Products.Queries.GetProductRatings;
 
-public class GetProductRatingQuery : IQueryRequest<Ratings>
+public class GetProductRatingQuery : IQuery<Ratings>
 {
     public Guid ProductId { get; set; }
 }

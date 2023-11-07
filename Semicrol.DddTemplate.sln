@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semicrol.DddTemplate.Core.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semicrol.DddTemplate.Application.Tests", "tests\Semicrol.DddTemplate.Application.Tests\Semicrol.DddTemplate.Application.Tests.csproj", "{9DF9BDE7-F6F4-44CD-9A06-4525BBD558ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semicrol.DddTemplate.Architecture.Tests", "tests\Semicrol.DddTemplate.Architecture.Tests\Semicrol.DddTemplate.Architecture.Tests.csproj", "{392DC9BB-C7F9-4184-B4E6-44289826A39F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,7 @@ Global
 		{C47C219A-45EC-440F-ACF5-258A32887961} = {74FD3EB0-85F2-4F59-8457-BE7BEEBC5022}
 		{C6A9D965-AAF0-49A7-806D-B0A31C9313E7} = {DA111F82-F84F-4CA4-BE44-A05ED066405C}
 		{9DF9BDE7-F6F4-44CD-9A06-4525BBD558ED} = {DA111F82-F84F-4CA4-BE44-A05ED066405C}
+		{392DC9BB-C7F9-4184-B4E6-44289826A39F} = {DA111F82-F84F-4CA4-BE44-A05ED066405C}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EEE120E2-2692-4EF5-BA2F-325EC5AFC3E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -54,5 +57,9 @@ Global
 		{9DF9BDE7-F6F4-44CD-9A06-4525BBD558ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DF9BDE7-F6F4-44CD-9A06-4525BBD558ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DF9BDE7-F6F4-44CD-9A06-4525BBD558ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{392DC9BB-C7F9-4184-B4E6-44289826A39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392DC9BB-C7F9-4184-B4E6-44289826A39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392DC9BB-C7F9-4184-B4E6-44289826A39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392DC9BB-C7F9-4184-B4E6-44289826A39F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

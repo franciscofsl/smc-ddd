@@ -4,7 +4,7 @@ using Semicrol.DddTemplate.Core.Products;
 
 namespace Semicrol.DddTemplate.Application.Products.Commands.RateProduct;
 
-public class RateProductCommand : ICommandRequest<Rating>
+public class RateProductCommand : ICommand<Rating>
 {
     public Guid ProductId { get; set; }
     

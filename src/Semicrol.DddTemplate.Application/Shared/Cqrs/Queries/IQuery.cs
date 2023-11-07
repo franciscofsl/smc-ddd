@@ -1,6 +1,6 @@
 namespace Semicrol.DddTemplate.Application.Shared.Cqrs.Queries;
 
-public interface IQueryRequest<TResult> where TResult : class
+public interface IQuery<TResult> where TResult : class
 {
 
 }

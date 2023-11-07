@@ -9,10 +9,10 @@ public class QueryDispatcher : IQueryDispatcher
         _serviceProvider = serviceProvider;
     }
 
-    public async Task<TQueryResult> Dispatch<TQueryResult>(IQueryRequest<TQueryResult> commandRequest) where TQueryResult : class
+    public async Task<TQueryResult> Dispatch<TQueryResult>(IQuery<TQueryResult> command) where TQueryResult : class
     {
-        var type = typeof(IQueryHandler<,>).MakeGenericType(commandRequest.GetType(), typeof(TQueryResult));
+        var type = typeof(IQueryHandler<,>).MakeGenericType(command.GetType(), typeof(TQueryResult));
         dynamic handler = _serviceProvider.GetService(type);
-        return await handler.Handle((dynamic)commandRequest);
+        return await handler.Handle((dynamic)command);
     }
 }

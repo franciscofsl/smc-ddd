@@ -1,6 +1,6 @@
 ﻿namespace Semicrol.DddTemplate.Application.Shared.Cqrs.Commands;
 
-public interface ICommandRequest<TResult> where TResult : class
+public interface ICommand<TResult> where TResult : class
 {
 
 }
