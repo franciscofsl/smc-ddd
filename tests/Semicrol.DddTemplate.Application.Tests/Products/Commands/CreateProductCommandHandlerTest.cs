@@ -1,4 +1,6 @@
-﻿using NSubstitute;
+﻿using Castle.Components.DictionaryAdapter;
+using Moq;
+using NSubstitute;
 using Semicrol.DddTemplate.Application.Products.Commands.CreateProduct;
 using Semicrol.DddTemplate.Core.Products;
 using Shouldly;
@@ -11,6 +13,7 @@ public class CreateProductCommandHandlerTest
     public async Task Handle_CreateProductCommand_Should_Return_Product()
     {
         var repository = Substitute.For<IProductRepository>();
+        
         var handler = new CreateProductCommandHandler(repository);
         var command = new CreateProductCommand
         {
@@ -23,8 +26,8 @@ public class CreateProductCommandHandlerTest
         result.ShouldNotBeNull();
         result.Information.Title.ShouldBe("Test Product");
         result.Information.Description.ShouldBe("This is a test product.");
-    }
-
+    } 
+    
     [Fact]
     public async Task Handle_CreateProductCommand_Should_Save_Changes_In_Repository()
     {
@@ -38,4 +41,4 @@ public class CreateProductCommandHandlerTest
 
         await handler.Handle(command);
     }
-}
+} 
